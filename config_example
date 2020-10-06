@@ -1,0 +1,28 @@
+
+Host server1
+  HostName 192.168.0.1
+  User ubuntu
+  IdentityFile ~/.ssh/id_rsa_server
+  ProxyCommand ssh -W %h:%p -i ~/.ssh/id_rsa_bastion ubuntu@212.186.105.45
+    
+
+Host server2
+  HostName 192.168.0.2
+  User ubuntu
+  IdentityFile ~/.ssh/id_rsa_server
+  ProxyCommand ssh -W %h:%p -i ~/.ssh/id_rsa_bastion ubuntu@212.186.105.45
+    
+
+Host server3
+  HostName 192.168.0.3
+  User ubuntu
+  IdentityFile ~/.ssh/id_rsa_server
+  ProxyCommand ssh -W %h:%p -i ~/.ssh/id_rsa_bastion ubuntu@212.186.105.48
+    
+
+Host server4
+  HostName 192.168.0.4
+  User ubuntu
+  IdentityFile ~/.ssh/id_rsa_server
+  ProxyCommand ssh -W %h:%p -i ~/.ssh/id_rsa_bastion ubuntu@212.186.105.49
+    
